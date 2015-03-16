@@ -21,7 +21,6 @@ function randomPlay() {
 /*           Write Your Code Below            */
 ////////////////////////////////////////////////
 
-
 function getPlayerMove(move) {
 
    if ((move=='rock')||(move=='paper')||(move=='scissors')){
@@ -44,15 +43,16 @@ function getWinner(playerMove,computerMove) {
     var winner;
    if (playerMove==computerMove)
    {
-    return winner= 'tie';
+    rwinner= 'tie';
 }
 else if((playerMove=='rock'&&computerMove=='scissors')||(playerMove=='paper'&&computerMove=='rock')||(playerMove=='scissors'&&computerMove=='paper')){
-    return winner= 'player';
+     winner= 'player';
 }
 else
 {
-    return winner= 'comupter'
+     winner= 'comupter'
 }
+return winner
 }
 
 function playToFive(playerMove,computerMove) {
@@ -76,4 +76,3 @@ else if(getWinner(playerMove,computerMove)=='comupter')
     return ;
 
 }
-
