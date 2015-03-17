@@ -51,14 +51,14 @@ else
 return winner
 }
 
-function playToFive() {
+function playToFive(time) {
     console.log("Let's play Rock, Paper, Scissors");
     var playerWins = 0;
     var computerWins = 0;
    
-    while (playerWins<5&&computerWins<5){
- var playerMove =getPlayerMove();
-    var computerMove =getComputerMove();
+    while (playerWins<time &&computerWins<time){
+ var playerMove =getPlayerMove(getInput());
+    var computerMove =getComputerMove(randomPlay());
     
 if (getWinner(playerMove,computerMove)=='player')       
     {
@@ -76,3 +76,5 @@ else if(getWinner(playerMove,computerMove)=='comupter')
     return ;
 
 }
+
+playToFive(3) 
